@@ -1,5 +1,6 @@
-import './Calculator.css';
 import React, { Component } from 'react';
+import Display from '../Display/Display';
+import './Calculator.css';
 
 class Calculator extends Component {
   state = {
@@ -27,11 +28,22 @@ class Calculator extends Component {
     console.log('update display');
   }
 
+  // render = () => {
+  //   return (
+  //     <div className="calculator-container" />
+  //   );
+  // }
   render = () => {
+    // unpack the component state by using Object Destructuring
+    const { displayValue } = this.state;
+
     return (
-      <div className="calculator-container" />
-    );
+      <div className="calculator-container">
+        <Display displayValue={displayValue} />
+      </div>
+      );
+    }
   }
-}
+
 
 export default Calculator;
