@@ -20,8 +20,12 @@ describe('Keypad', () => {
   //   expect(wrapper.find('div').length).toEqual(1);
   // });
 
-  it('should render 2 <div />\'s', () => {
-    expect(wrapper.find('div').length).toEqual(2);
+  // it('should render 2 <div />\'s', () => {
+  //   expect(wrapper.find('div').length).toEqual(2);
+  // });
+
+  it('should render 3 <div />\'s', () => {
+    expect(wrapper.find('div').length).toEqual(3);
   });
 
   it('renders the values of numbers', () => {
