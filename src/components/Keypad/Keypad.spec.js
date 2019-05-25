@@ -29,4 +29,9 @@ describe('Keypad', () => {
     expect(wrapper.find('.numbers-container').text()).toEqual('012');
   });
 
+  it('renders the values of operators', () => {
+    wrapper.setProps({operators: ['+', '-', '*', '/']});
+    expect(wrapper.find('.operators-container').text()).toEqual('+-*/');
+  });
+
 });
