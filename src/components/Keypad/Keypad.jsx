@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './Keypad.css';
 // const Keypad = ({ callOperator, numbers, operators, setOperator, updateDisplay }) =>
 //   <div className="keypad-container" />;
 
