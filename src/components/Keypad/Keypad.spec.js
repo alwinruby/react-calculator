@@ -16,14 +16,6 @@ describe('Keypad', () => {
     );
   });
 
-  // it('should render a <div />', () => {
-  //   expect(wrapper.find('div').length).toEqual(1);
-  // });
-
-  // it('should render 2 <div />\'s', () => {
-  //   expect(wrapper.find('div').length).toEqual(2);
-  // });
-
   it('should render 3 <div />\'s', () => {
     expect(wrapper.find('div').length).toEqual(3);
   });
@@ -36,6 +28,10 @@ describe('Keypad', () => {
   it('renders the values of operators', () => {
     wrapper.setProps({operators: ['+', '-', '*', '/']});
     expect(wrapper.find('.operators-container').text()).toEqual('+-*/');
+  });
+
+  it('should render an instance of the Key component', () => {
+    expect(wrapper.find('Key').length).toEqual(1);
   });
 
 });
