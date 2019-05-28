@@ -16,7 +16,7 @@
 }
 
 .operator-key:hover {
-  background-color: var(--action-key-color-hover); 
+  background-color: var(--action-key-color-hover);
 }
 
 .number-key {
