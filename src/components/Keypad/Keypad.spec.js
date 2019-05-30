@@ -54,4 +54,7 @@ describe('mounted Keypad', () => {
     wrapper.setProps({ operators: ['+', '-', '*', '/'] });
     expect(wrapper.find('.operators-container').text()).toEqual('+-*/');
   });
+
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
+
 });
