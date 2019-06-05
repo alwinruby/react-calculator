@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import Keypad from './Keypad';
-import Key from '../Key/Key';
 
 describe('Keypad', () => {
   let wrapper;
@@ -9,6 +8,7 @@ describe('Keypad', () => {
     wrapper = shallow(
       <Keypad
         callOperator={jest.fn()}
+        handleKeyPress={jest.fn()}
         numbers={[]}
         operators={[]}
         setOperator={jest.fn()}
@@ -16,6 +16,8 @@ describe('Keypad', () => {
       />
     );
   });
+
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
   it('should render 4 <div />\'s', () => {
     expect(wrapper.find('div').length).toEqual(4);
@@ -37,6 +39,7 @@ describe('mounted Keypad', () => {
     wrapper = mount(
       <Keypad
         callOperator={jest.fn()}
+        handleKeyPress={jest.fn()}
         numbers={[]}
         operators={[]}
         setOperator={jest.fn()}
@@ -54,7 +57,4 @@ describe('mounted Keypad', () => {
     wrapper.setProps({ operators: ['+', '-', '*', '/'] });
     expect(wrapper.find('.operators-container').text()).toEqual('+-*/');
   });
-
-  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
-
 });
