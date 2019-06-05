@@ -5,24 +5,20 @@ import Keypad from '../Keypad/Keypad';
 
 
 class Calculator extends Component {
-  // state = {
-  //   // value to be displayed in <Display />
-  //   displayValue: '0',
-  //   // values to be displayed in number <Keys />
-  //   numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '.', '0','ce'],
-  //   // values to be displayed in operator <Keys />
-  //   operators: ['/', 'x', '-', '+'],
-  //   // operator selected for math operation
-  //   selectedOperator: '',
-  //   // stored value to use for math operation
-  //   storedValue: '',
-  // }
 
-  state = {
-    displayValue: '0',
+
+  constructor(props) {
+    this.state = {
+      displayValue: '0',
+    }
+
+    // explicit binding
+    this.updateDisplay = this.updateDisplay.bind(this);
   }
 
-  updateDisplay = value => this.setState({ displayValue: value });
+  updateDisplay(value) {
+    this.setState({ displayValue: value });
+  }
 
   callOperator = () => {
     console.log('call operation');
