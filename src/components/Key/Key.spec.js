@@ -7,6 +7,7 @@ describe('Key', () => {
   beforeEach(() => {
     wrapper = shallow(
       <Key
+        handleKeyPress={jest.fn()}
         keyAction={jest.fn()}
         keyType={''}
         keyValue={''}
@@ -24,6 +25,4 @@ describe('Key', () => {
     wrapper.setProps({ keyValue: 'test' });
     expect(wrapper.text()).toEqual('test');
   });
-
-
 });
