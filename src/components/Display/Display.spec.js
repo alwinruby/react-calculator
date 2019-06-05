@@ -1,10 +1,9 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import Display from './Display';
 
 describe('Display', () => {
   let wrapper;
-  // beforeEach(() => wrapper = shallow(<Display />));
   beforeEach(() => wrapper = shallow(<Display displayValue={''} />));
 
   it('should render correctly', () => expect(wrapper).toMatchSnapshot());
@@ -15,7 +14,6 @@ describe('Display', () => {
 
   it('renders the value of displayValue', () => {
     wrapper.setProps({ displayValue: 'test' });
-    expect(wrapper.text()).toEqual('test');
+    expect(wrapper.text()).toEqual('test');;
   });
-
 });
