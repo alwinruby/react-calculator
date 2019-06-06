@@ -1,10 +1,6 @@
 # TDD React
 
-## Local Setup
-
-```sh
-$ git clone git@github.com:calebpollman/react-calculator.git
-```
+Clone the Repo
 
 ```sh
 $ cd react-calculator
