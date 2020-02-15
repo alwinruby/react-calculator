@@ -1,6 +1,6 @@
 # TDD React
 
-Clone the Repo
+## Clone the Repo
 
 ```sh
 $ cd react-calculator
